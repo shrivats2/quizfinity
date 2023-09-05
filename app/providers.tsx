@@ -1,19 +1,30 @@
 "use client";
-
-import * as React from "react";
-import { NextUIProvider } from "@nextui-org/system";
+import React from "react";
+import { SessionProvider } from "next-auth/react";
+import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { ThemeProviderProps } from "next-themes/dist/types";
+import { type ThemeProviderProps } from "next-themes/dist/types";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from "@tanstack/react-query";
+const queryClient = new QueryClient();
 
-export interface ProvidersProps {
-	children: React.ReactNode;
-	themeProps?: ThemeProviderProps;
-}
+const Providers = ({ children }: ThemeProviderProps) => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <NextUIProvider>
+        <NextThemesProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
+          <SessionProvider>{children}</SessionProvider>
+        </NextThemesProvider>
+      </NextUIProvider>
+    </QueryClientProvider>
+  );
+};
 
-export function Providers({ children, themeProps }: ProvidersProps) {
-	return (
-		<NextUIProvider>
-			<NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
-		</NextUIProvider>
-	);
-}
+export default Providers;
