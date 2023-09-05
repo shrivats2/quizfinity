@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "@nextui-org/react";
+import { Card } from "@nextui-org/card";
 import { Percent, Target } from "lucide-react";
 
 type Props = {

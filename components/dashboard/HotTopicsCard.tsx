@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader,CardBody} from "@nextui-org/react";
+import { Card, CardHeader,CardBody} from "@nextui-org/card";
 import { prisma } from "@/lib/db";
 import WordCloud from "../WordCloud";
 

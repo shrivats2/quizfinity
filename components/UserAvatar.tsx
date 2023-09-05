@@ -1,6 +1,6 @@
 import { type User } from "next-auth";
 import React from "react";
-import { Avatar } from "@nextui-org/react";
+import { Avatar } from "@nextui-org/avatar";
 import Image from "next/image";
 
 interface Props {

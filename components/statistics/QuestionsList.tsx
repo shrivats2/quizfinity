@@ -7,8 +7,7 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Divider,
-} from "@nextui-org/react";
+} from "@nextui-org/table";
 import { Question } from "@prisma/client";
 
 type Props = {

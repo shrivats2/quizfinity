@@ -1,7 +1,7 @@
 import React from "react";
-import { Card } from "@nextui-org/react";
+import { Card } from "@nextui-org/card";
 import { CheckCircle2, XCircle } from "lucide-react";
-import { Divider } from "@nextui-org/react";
+import { Divider } from "@nextui-org/divider";
 
 type Props = {
   correct_answers: number;

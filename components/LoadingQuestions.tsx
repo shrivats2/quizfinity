@@ -1,5 +1,5 @@
 import React from "react";
-import {Progress} from "@nextui-org/react";
+import {Progress} from "@nextui-org/progress";
 import Image from "next/image";
 
 type Props = { finished: boolean };
