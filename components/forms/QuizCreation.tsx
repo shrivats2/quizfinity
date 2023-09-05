@@ -8,7 +8,7 @@ import axios, { AxiosError } from "axios";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 // import {Textarea} from "@nextui-org/react";
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 // import { Input } from "@nextui-org/react";
 import { BookOpen, CopyCheck, Loader2 } from "lucide-react";
 import { Card, CardHeader, CardBody } from "@nextui-org/react";

@@ -5,7 +5,7 @@ import { differenceInSeconds } from "date-fns";
 import { BarChart, ChevronRight, Loader2, Timer } from "lucide-react";
 import React from "react";
 import { Card, CardBody, CardHeader } from "@nextui-org/react";
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 import OpenEndedPercentage from "./OpenEndedPercentage";
 import BlankAnswerInput from "./BlankAnswerInput";
 import { useMutation } from "@tanstack/react-query";

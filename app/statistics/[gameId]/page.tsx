@@ -9,7 +9,7 @@ import ResultsCard from "@/components/statistics/ResultsCard";
 import AccuracyCard from "@/components/statistics/AccuracyCard";
 import TimeTakenCard from "@/components/statistics/TimeTakenCard";
 import QuestionsList from "@/components/statistics/QuestionsList";
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 
 type Props = {
   params: {

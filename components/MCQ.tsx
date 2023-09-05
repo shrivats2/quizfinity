@@ -1,8 +1,8 @@
 "use client";
 import { Game, Question } from "@prisma/client";
 import React from "react";
-import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/react";
-import { Button} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
+import { Button} from "@nextui-org/button";
 import { differenceInSeconds } from "date-fns";
 import Link from "next/link";
 import { BarChart, ChevronRight, Loader2, Timer } from "lucide-react";

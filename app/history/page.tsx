@@ -1,10 +1,11 @@
 import HistoryComponent from "@/components/HistoryComponent";
 import { getAuthSession } from "@/lib/nextauth";
 import { redirect } from "next/navigation";
-import { Card, CardHeader, CardBody, Button } from "@nextui-org/react";
+import {Card, CardHeader, CardBody} from "@nextui-org/card";
 import React from "react";
 import Link from "next/link";
 import { LucideLayoutDashboard } from "lucide-react";
+import { Button } from "@nextui-org/button";
 
 type Props = {};
 
