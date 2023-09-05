@@ -1,3 +1,22 @@
+# Quizfinity
+
+Quizfinity is a web-based quiz and trivia game application that allows users to create and play quizzes on various topics. This README provides an overview of the project.
+
+# Features
+
+- User authentication for creating and playing quizzes.
+- Create quizzes with multiple-choice and open-ended questions.
+- Real-time tracking of quiz progress.
+- Detailed statistics and analysis of quiz performance.
+- Integration with an AI-based question generation system.
+- Interactive and user-friendly interface.
+
+# Usage
+Create an account or log in to Quizfinity.
+Create a quiz with your desired settings, including the topic, type, and number of questions.
+Play quizzes created by other users or share your quizzes with friends.
+Track your quiz performance, view statistics, and improve your knowledge!
+
 # Next.js & NextUI Template
 
 This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
