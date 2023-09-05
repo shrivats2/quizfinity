@@ -21,7 +21,7 @@ const QuestionsList = ({ questions }: Props) => {
         <TableColumn className="font-bold text-base">No.</TableColumn>
         <TableColumn className="font-bold text-base">Question & Correct Answer</TableColumn>
         <TableColumn className="font-bold text-base">Your Answer</TableColumn>
-        {questions[0].questionType === "open_ended" ? (
+        {questions[0]?.questionType === "open_ended" ? (
           <TableColumn className="font-bold text-base" align="end">Accuracy</TableColumn>
         ) : (
           <TableColumn  className="w-0 font-bold text-base">Accuracy</TableColumn>
@@ -41,7 +41,7 @@ const QuestionsList = ({ questions }: Props) => {
                 <br />
                 <span style={{ fontWeight: "bold" }}>{answer}</span>
               </TableCell>
-              {questions[0].questionType === "open_ended" ? (
+              {questions[0]?.questionType === "open_ended" ? (
                 <TableCell style={{ fontWeight: "bold" }}>
                   {userAnswer}
                 </TableCell>

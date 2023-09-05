@@ -25,7 +25,7 @@ export async function POST(req: Request, res: Response) {
       where: { id: questionId },
       data: { userAnswer: userInput },
     });
-    if (question.questionType === "mcq") {
+    if (question?.questionType === "mcq") {
       const isCorrect =
         question.answer.toLowerCase().trim() === userInput.toLowerCase().trim();
       await prisma.question.update({
@@ -35,7 +35,7 @@ export async function POST(req: Request, res: Response) {
       return NextResponse.json({
         isCorrect,
       });
-    } else if (question.questionType === "open_ended") {
+    } else if (question?.questionType === "open_ended") {
       let percentageSimilar = stringSimilarity(
         question.answer.toLowerCase().trim(),
         userInput.toLowerCase().trim()
