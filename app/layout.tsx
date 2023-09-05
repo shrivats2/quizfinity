@@ -3,14 +3,14 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Providers from "@/app/providers";
-import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Quizmify",
+  title: "Quizfinity",
   description: "Quiz yourself on anything!",
 };
 

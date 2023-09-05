@@ -1,5 +1,5 @@
 import SignInButton from "@/components/SignInButton";
-import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 
