@@ -87,6 +87,7 @@ const QuizCreation = ({ topic: topicParam }: Props) => {
               label="Topic"
               placeholder="Eg-Web Dev"
               variant="bordered"
+              defaultValue={topicParam}
               onChange={(e) => {
                 form.setValue("topic", e.target.value);
               }}
