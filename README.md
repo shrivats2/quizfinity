@@ -2,6 +2,9 @@
 
 Quizfinity is a web-based quiz and trivia game application that allows users to create and play quizzes on various topics. This README provides an overview of the project.
 
+![quiz](https://github.com/shrivats2/quizfinity/assets/61049031/50efac96-bda3-46f8-9958-6fec91ba9094)
+
+
 # Features
 
 - User authentication for creating and playing quizzes.
