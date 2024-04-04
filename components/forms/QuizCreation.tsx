@@ -2,8 +2,8 @@
 import { quizCreationSchema } from "@/schemas/form/quiz";
 import React from "react";
 import { useState } from "react";
-import { Divider} from "@nextui-org/divider";
-import {Input} from "@nextui-org/input";
+import { Divider } from "@nextui-org/divider";
+import { Input } from "@nextui-org/input";
 import { z } from "zod";
 import axios, { AxiosError } from "axios";
 import { useForm } from "react-hook-form";
@@ -105,7 +105,8 @@ const QuizCreation = ({ topic: topicParam }: Props) => {
               onChange={(e) => {
                 form.setValue("amount", parseInt(e.target.value));
               }}
-              min={1}
+              description="Please enter the number of questions. At least 3 questions will be generated."
+              min={3}
               max={10}
             />
             <div className="flex justify-between">

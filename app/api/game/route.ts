@@ -50,6 +50,8 @@ export async function POST(req: Request, res: Response) {
       }
     );
 
+    console.log("game data :\n" + data);
+
     if (type === "mcq") {
       type mcqQuestion = {
         question: string;

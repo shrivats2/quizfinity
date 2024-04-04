@@ -1,8 +1,57 @@
-import { generateQuestions } from "@/lib/gpt";
+import { generateQuestions } from "@/lib/gemini";
 import { getAuthSession } from "@/lib/nextauth";
 import { getQuestionsSchema } from "@/schemas/questions";
 import { NextResponse } from "next/server";
 import { ZodError } from "zod";
+
+interface Question {
+  question: string;
+  answer: string;
+  option1: string;
+  option2: string;
+  option3: string;
+}
+
+const CustomJsonParse = (jsonString: string): Question[] => {
+  let index = 0;
+
+  const parseValue = (): any => {
+    const char = jsonString[index];
+    if (char === '"') {
+      // String value
+      const startIndex = ++index;
+      while (jsonString[++index] !== '"');
+      return jsonString.slice(startIndex, index++);
+    } else if (char === "[") {
+      // Array value
+      const array: any[] = [];
+      while (jsonString[++index] !== "]") {
+        if (jsonString[index] === ",") continue;
+        array.push(parseValue());
+      }
+      index++;
+      return array;
+    } else if (char === "{") {
+      // Object value
+      const obj: any = {};
+      while (jsonString[++index] !== "}") {
+        if (jsonString[index] === ",") continue;
+        const key = parseValue();
+        index++; // Skip ':'
+        obj[key] = parseValue();
+      }
+      index++;
+      return obj;
+    } else {
+      // Number value
+      const startIndex = index;
+      while (/[\d.-]/.test(jsonString[++index]));
+      return parseFloat(jsonString.slice(startIndex, index));
+    }
+  };
+
+  return parseValue();
+};
 
 export async function POST(req: Request, res: Response) {
   try {
@@ -20,6 +69,7 @@ export async function POST(req: Request, res: Response) {
     let questions: any;
     if (type === "open_ended") {
       questions = await generateQuestions({ amount, type, topic });
+      console.log(questions);
     } else if (type === "mcq") {
       questions = await generateQuestions({ amount, type, topic });
     }
