@@ -17,7 +17,7 @@ const ResultsCard = ({ accuracy }: Props) => {
             <Trophy className="mr-4" stroke="gold" size={50} />
             <div className="flex flex-col text-2xl font-semibold text-yellow-400">
               <span className="">Impressive!</span>
-              <span className="text-sm text-center text-black opacity-50">
+              <span className="text-sm text-center text-black dark:text-gray-500 opacity-50">
                 {"> 75% accuracy"}
               </span>
             </div>

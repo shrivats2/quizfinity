@@ -12,7 +12,7 @@ import {
 import UserAvatar from "./UserAvatar";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
-import { LogOut } from "lucide-react";
+import { LayoutDashboard, LogOut } from "lucide-react";
 
 type Props = {
   user: Pick<User, "name" | "image" | "email">;
@@ -46,6 +46,13 @@ const UserAccountNav = ({ user }: Props) => {
             </div>
           </DropdownItem>
         </DropdownSection>
+        <DropdownItem>
+          <Link href="/dashboard">
+            <div className="flex gap-2 items-center">
+              <LayoutDashboard size={20} /> Dashboard
+            </div>
+          </Link>
+        </DropdownItem>
         <DropdownItem>
           <Link href="/">Home</Link>
         </DropdownItem>
